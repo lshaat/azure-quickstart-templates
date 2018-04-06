@@ -8,6 +8,12 @@
         "description": "Username for the Virtual Machine."
       }
     },
+    "addressPrefix": {
+      "type": "string",
+      "metadata": {
+        "description": "Address Prefix."
+      }
+    },
     "adminPassword": {
       "type": "securestring",
       "metadata": {
@@ -72,7 +78,7 @@
     "imagePublisher": "MicrosoftWindowsServer",
     "imageOffer": "WindowsServer",
     "nicName": "[parameters('nicName')]",
-    "addressPrefix": "10.0.0.0/16",
+    "addressPrefix": "[parameters('addressPrefix')]",
     "subnetName": "[parameters('subnetName')]",
     "subnetPrefix": "10.0.0.0/24",
     "publicIPAddressName": "[parameters('publicIPAddressName')]",
